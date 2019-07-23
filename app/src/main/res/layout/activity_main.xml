@@ -1,0 +1,143 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.example.android.karthik.myorder.MainActivity">
+
+        <EditText
+            android:id="@+id/user_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16sp"
+            android:hint="Enter name for order"
+            android:inputType="textCapWords" />
+
+        <TextView
+            style="@style/HeaderTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/toppings" />
+
+        <CheckBox
+            android:id="@+id/onions_checked"
+            android:layout_width="146dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16sp"
+            android:paddingLeft="24dp"
+            android:text="@string/onions"
+            android:textSize="16sp" />
+
+        <CheckBox
+            android:id="@+id/mushrooms_checked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16sp"
+            android:paddingLeft="24dp"
+            android:text="@string/mushrooms"
+            android:textSize="16sp" />
+
+        <CheckBox
+            android:id="@+id/olives_checked"
+            android:layout_width="146dp"
+            android:layout_height="wrap_content"
+            android:text="@string/olives"
+            android:layout_marginBottom="16sp"
+            android:paddingLeft="24dp"
+            android:textSize="16sp" />
+
+        <CheckBox
+            android:id="@+id/peppers_checked"
+            android:layout_width="147dp"
+            android:layout_height="wrap_content"
+            android:text="@string/peppers"
+            android:layout_marginBottom="16sp"
+            android:paddingLeft="24dp"
+            android:textSize="16sp" />
+
+        <TextView
+            style="@style/HeaderTextStyle"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/quantity" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginRight="8dp"
+                android:onClick="decrement"
+
+                android:text="-"
+
+                />
+
+
+            <TextView
+                android:id="@+id/quantity_text_view"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+
+                android:text="@string/initial_quantity_value"
+
+                android:textColor="#000000" />
+
+            <Button
+
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:onClick="increment"
+
+
+                android:text="+"
+
+
+                />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/show_calendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="showCalendar"
+            android:drawableLeft="@drawable/ic_summary_foreground"
+            android:text="Show calendar and create events" />
+
+
+        <Button
+            android:id="@+id/order_summary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="viewSummary"
+            android:drawableLeft="@drawable/ic_summary_foreground"
+            android:text="Order Summary" />
+
+        <Button
+            android:id="@+id/submit_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_mail_foreground"
+            android:onClick="submitOrder"
+            android:text="Submit Order" />
+
+
+    </LinearLayout>
+
+</ScrollView>
+
